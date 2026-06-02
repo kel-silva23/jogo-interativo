@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo interativo </title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- PRIMEIRA TELA INICIAL -->
+
+    <div class="tela-inicial" id="inicio">
+
+        <div class="overlay"></div>
+
+        <div class="conteudo">
+
+            <h1>O Preço do Racismo Ambiental</h1>
+
+            <p>
+                Quem realmente pagar o preço da destruição ambiental?
+            </p>
+
+            <button onclick="iniciarJogo()">
+                Iniciar Experiência
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- TELA DO JOGO -->
+
+    <div class="jogo" id="jogo">
+        <div class="fundo-jogo" id="fundoJogo"></div>
+        <h2 id="pergunta">
+            Grupos de mineração querem explorar recursos dentro de territórios indígenas protegidos.
+        </h2>
+
+        <div class="botoes"> 
+
+            <button id="botao1" onclick="proteger()">
+                🌳 Proteger território
+            </button>
+
+            <button id="botao2" onclick="garimpo()">
+                ⛏️ Permitir garimpo
+            </button>
+
+        </div>
+
+        <!-- INDICADORES -->
+
+       <div class="status">
+
+    <div class="barra-box">
+
+        <p>🌳 Floresta</p>
+
+        <div class="barra">
+            <div class="progresso" id="barraFloresta"></div>
+        </div>
+
+    </div>
+
+    <div class="barra-box">
+
+        <p>💧 Água</p>
+
+        <div class="barra">
+            <div class="progresso" id="barraAgua"></div>
+        </div>
+
+    </div>
+
+    <div class="barra-box">
+
+        <p>🐾 Animais</p>
+
+        <div class="barra">
+            <div class="progresso" id="barraAnimais"></div>
+        </div>
+
+    </div>
+
+    <div class="barra-box">
+
+        <p>👥 Comunidades indígenas</p>
+
+        <div class="barra">
+            <div class="progresso" id="barraComunidades"></div>
+        </div>
+
+    </div>
+
+</div>
+
+        <div class="mensagem" id="mensagem">
+        </div>
+
+        <video id="videoProtecao">
+
+   <source src="videos/vidaAmazonia.mp4" type="video/mp4">
+
+</video>
+
+<div id="textoVideo">
+
+    🌳 Excelente escolha! Você ajudou a proteger a floresta,
+    os animais e as comunidades indígenas.
+
+</div>
+
+<button id="continuar" onclick="continuarJogo()">
+
+    Continuar
+
+</button>
+
+<video id="videoGarimpo">
+
+    <source src="videos/queimada.mp4" type="video/mp4">
+
+</video>
+
+<div id="textoGarimpo">
+  você escolheu permitir.. essa foram as consequencias!!!!
+</div> 
+
+    <button id="continuar" onclick="continuarJogo()">
+
+    Continuar
+
+</button>
+
+<div id="telaFinal">
+
+    <h1 id="tituloFinal"></h1>
+
+    <p id="textoFinal"></p>
+
+    <button onclick="location.reload()">
+
+        🔄 Jogar novamente
+
+    </button>
+
+</div>
+
+    <script src="script.js"></script>
+
+
+</body>
+</html>
